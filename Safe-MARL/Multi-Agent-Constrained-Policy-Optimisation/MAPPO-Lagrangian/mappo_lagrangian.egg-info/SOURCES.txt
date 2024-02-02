@@ -1,4 +1,3 @@
-README.md
 setup.py
 mappo_lagrangian/__init__.py
 mappo_lagrangian/config.py

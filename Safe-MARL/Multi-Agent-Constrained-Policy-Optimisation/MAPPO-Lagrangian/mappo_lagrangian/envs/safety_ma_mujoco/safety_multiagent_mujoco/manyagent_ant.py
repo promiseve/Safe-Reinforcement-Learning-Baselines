@@ -3,7 +3,7 @@ from gym import utils
 from gym.envs.mujoco import mujoco_env
 from jinja2 import Template
 
-import mujoco_py as mjp
+import mujoco as mjp
 
 import os
 

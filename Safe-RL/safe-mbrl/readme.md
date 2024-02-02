@@ -20,11 +20,11 @@ This repo has been tested on Ubuntu 18.04 LTS, and is probably fine for most rec
 ## Setup
 ### Simulation Environment Installation 
 
-Our experiment environments are modified from [Safety Gym](https://github.com/openai/safety-gym), which depends heavily on [mujoco_py](https://github.com/openai/mujoco-py). 
+Our experiment environments are modified from [Safety Gym](https://github.com/openai/safety-gym), which depends heavily on [mujoco](https://github.com/openai/mujoco-py). 
 
 The first step is to install [MuJoCo-200](https://www.roboti.us/index.html): download binaries, put license file inside, and add path to `~/.bashrc`. 
 
-Then, install mujoco_py. See the [mujoco_py](https://github.com/openai/mujoco-py) documentation for details. Note that mujoco_py **requires Python 3.6 or greater**, so our simulation environments do as well.
+Then, install mujoco. See the [mujoco](https://github.com/openai/mujoco-py) documentation for details. Note that mujoco **requires Python 3.6 or greater**, so our simulation environments do as well.
 
 Afterwards, simply install our modified Safety Gym environments by:
 

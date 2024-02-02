@@ -9,9 +9,9 @@ from os import path
 import gym
 
 try:
-    import mujoco_py
+    import mujoco
 except ImportError as e:
-    raise error.DependencyNotInstalled("{}. (HINT: you need to install mujoco_py, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)".format(e))
+    raise error.DependencyNotInstalled("{}. (HINT: you need to install mujoco, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)".format(e))
 
 DEFAULT_SIZE = 500
 
@@ -44,8 +44,8 @@ class MujocoEnv(gym.Env):
         if not path.exists(fullpath):
             raise IOError("File %s does not exist" % fullpath)
         self.frame_skip = frame_skip
-        self.model = mujoco_py.load_model_from_path(fullpath)
-        self.sim = mujoco_py.MjSim(self.model)
+        self.model = mujoco.load_model_from_path(fullpath)
+        self.sim = mujoco.MjSim(self.model)
         self.data = self.sim.data
         self.viewer = None
         self._viewers = {}
@@ -110,7 +110,7 @@ class MujocoEnv(gym.Env):
     def set_state(self, qpos, qvel):
         assert qpos.shape == (self.model.nq,) and qvel.shape == (self.model.nv,)
         old_state = self.sim.get_state()
-        new_state = mujoco_py.MjSimState(old_state.time, qpos, qvel,
+        new_state = mujoco.MjSimState(old_state.time, qpos, qvel,
                                          old_state.act, old_state.udd_state)
         self.sim.set_state(new_state)
         self.sim.forward()
@@ -167,9 +167,9 @@ class MujocoEnv(gym.Env):
         self.viewer = self._viewers.get(mode)
         if self.viewer is None:
             if mode == 'human':
-                self.viewer = mujoco_py.MjViewer(self.sim)
+                self.viewer = mujoco.MjViewer(self.sim)
             elif mode == 'rgb_array' or mode == 'depth_array':
-                self.viewer = mujoco_py.MjRenderContextOffscreen(self.sim, -1)
+                self.viewer = mujoco.MjRenderContextOffscreen(self.sim, -1)
 
             self.viewer_setup()
             self._viewers[mode] = self.viewer

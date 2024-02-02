@@ -22,7 +22,7 @@ Our code also heavily depends upon <a href="https://github.com/befelix/SafeMDP" 
 
 ### Safety-Gym
 
-Finally, we developed a new environment called GP-Safety-Gym. This enviornment is based on OpenAI Safety-Gym. For the installation, see <a href="https://github.com/openai/safety-gym" target="_blank">Safety-Gym</a> repository. Note that OpenAI Safety-Gym and our GP-Safety-Gym heavily depends on  <a href="https://github.com/openai/mujoco-py" target="_blank">mujoco_py</a>.
+Finally, we developed a new environment called GP-Safety-Gym. This enviornment is based on OpenAI Safety-Gym. For the installation, see <a href="https://github.com/openai/safety-gym" target="_blank">Safety-Gym</a> repository. Note that OpenAI Safety-Gym and our GP-Safety-Gym heavily depends on  <a href="https://github.com/openai/mujoco-py" target="_blank">mujoco</a>.
 
 
 

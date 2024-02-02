@@ -2,7 +2,7 @@ import numpy as np
 # from mujoco_safety_gym.envs import mujoco_env
 from mappo_lagrangian.envs.safety_ma_mujoco.safety_multiagent_mujoco import mujoco_env
 from gym import utils
-import mujoco_py as mjp
+import mujoco as mjp
 
 
 class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):

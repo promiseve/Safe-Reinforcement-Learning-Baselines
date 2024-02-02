@@ -3,7 +3,7 @@ import safety_gym
 import numpy as np
 
 from safety_gym.envs.engine import Engine
-from mujoco_py import (MjViewer, const, MjRenderContextOffscreen)
+from mujoco import (MjViewer, const, MjRenderContextOffscreen)
 
 
 MAP_SIZE = 3.5

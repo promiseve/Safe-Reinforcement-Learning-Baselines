@@ -3,7 +3,7 @@ from gym import utils
 from gym.envs.mujoco import mujoco_env
 from mappo_lagrangian.envs.safety_ma_mujoco.safety_multiagent_mujoco import mujoco_env
 import os
-import mujoco_py as mjp
+import mujoco as mjp
 from gym import error, spaces
 
 class CoupledHalfCheetah(mujoco_env.MujocoEnv, utils.EzPickle):

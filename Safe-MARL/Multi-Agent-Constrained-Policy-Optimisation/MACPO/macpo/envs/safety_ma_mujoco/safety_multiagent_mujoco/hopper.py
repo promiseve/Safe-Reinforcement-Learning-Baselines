@@ -1,7 +1,7 @@
 import numpy as np
 from macpo.envs.safety_ma_mujoco.safety_multiagent_mujoco import mujoco_env
 from gym import utils
-import mujoco_py as mjp
+import mujoco as mjp
 
 
 class HopperEnv(mujoco_env.MujocoEnv, utils.EzPickle):

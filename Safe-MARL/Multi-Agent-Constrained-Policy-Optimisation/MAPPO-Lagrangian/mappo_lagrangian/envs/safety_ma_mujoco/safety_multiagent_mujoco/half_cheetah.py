@@ -3,7 +3,7 @@ from gym import utils
 # from mujoco_safety_gym.envs import mujoco_env
 # from gym.envs.mujoco import mujoco_env
 from mappo_lagrangian.envs.safety_ma_mujoco.safety_multiagent_mujoco import mujoco_env
-import mujoco_py as mjp
+import mujoco as mjp
 from gym import error, spaces
 
 

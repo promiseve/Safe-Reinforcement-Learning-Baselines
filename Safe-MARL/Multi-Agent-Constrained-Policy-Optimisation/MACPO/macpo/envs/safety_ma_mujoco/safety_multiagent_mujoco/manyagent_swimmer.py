@@ -4,7 +4,7 @@ from gym.envs.mujoco import mujoco_env
 
 import os
 from jinja2 import Template
-import mujoco_py as mjp
+import mujoco as mjp
 
 class ManyAgentSwimmerEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     def __init__(self, **kwargs):
